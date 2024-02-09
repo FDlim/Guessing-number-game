@@ -14,11 +14,18 @@ let gameOverScreen = document.getElementById("game-over-screen");
 let input = document.getElementById("input-num");
 let gameStartBtn = document.getElementById("game-start");
 let buttonContent = document.getElementById("button-content");
+
 let computerNum = 0;
 playButton.disabled = true;
 resetButton.disabled = true;
 input.disabled = true;
 playButton.addEventListener("click", gameStart);
+input.addEventListener("keypress", function (event) {
+  if (event.keyCode === 13) {
+    gameStart();
+    console.log("엔터 눌러짐");
+  }
+});
 resetButton.addEventListener("click", gameReset);
 gameStartBtn.addEventListener("click", function () {
   gameStartBtn.remove();
