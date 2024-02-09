@@ -5,15 +5,23 @@ let beforeInputNum = 0;
 let result = document.getElementById("result");
 let whatNum = document.getElementById("what-num");
 let gameOverAudio = new Audio("./audio/game-over.mp3");
-let gameOverScreen = document.getElementById("game-over-screen");
 let backgroundAudio = new Audio("./audio/background-sound.mp3");
-soundStart(backgroundAudio);
-console.log(gameOverScreen);
-
+let gameOverScreen = document.getElementById("game-over-screen");
+// let backgroundAudio = new Audio("./audio/background-sound.mp3");
 let input = document.getElementById("input-num");
+let gameStartBtn = document.getElementById("game-start");
+let buttonContent = document.getElementById("button-content");
 let computerNum = 0;
+playButton.disabled = true;
+resetButton.disabled = true;
 playButton.addEventListener("click", gameStart);
 resetButton.addEventListener("click", gameReset);
+gameStartBtn.addEventListener("click", function () {
+  gameStartBtn.remove();
+  playButton.disabled = false;
+  resetButton.disabled = false;
+  soundStart(backgroundAudio);
+});
 input.addEventListener("click", function () {
   input.value = "";
 });
@@ -22,6 +30,8 @@ function soundStart(file) {
   file.volume = 1;
   file.play();
 }
+
+// soundStart(backgroundAudio);
 
 function pickRandomNum() {
   computerNum = Math.floor(Math.random() * 100) + 1;

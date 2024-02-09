@@ -49,12 +49,9 @@ body {
   overflow: hidden;
 }
 .content {
-  display: block;
   width: 400px;
   height: 800px;
   position: absolute;
-
-  justify-content: center;
 }
 
 .title {
@@ -69,21 +66,20 @@ body {
 }
 
 .input-num {
-  margin-left: 40%;
-  margin-right: 40%;
-  display: flex;
-  justify-content: center;
   font-size: 5em;
-
   width: 60px;
   height: 60px;
   margin-top: 10%;
+  margin-left: 35%;
+  margin-right: 30%;
 }
 
 .input-style {
   font-size: 80%;
   width: 100px;
+  display: flex;
   text-align: center;
+  justify-content: center;
   background-color: #e04342;
 }
 input::-webkit-outer-spin-button,
@@ -106,7 +102,8 @@ input::-webkit-inner-spin-button {
 
 .button-content {
   display: flex;
-  justify-content: space-between;
+
+  justify-content: center;
   margin-top: 10%;
   margin-left: 20%;
   margin-right: 20%;
@@ -116,12 +113,12 @@ input::-webkit-inner-spin-button {
   background-color: #e04342;
   height: 60px;
   width: 90px;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .reset-button {
   height: 60px;
   width: 90px;
   background-color: #e04342;
-  font-size: 35px;
+  font-size: 30px;
 }
