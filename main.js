@@ -6,6 +6,8 @@ let result = document.getElementById("result");
 let whatNum = document.getElementById("what-num");
 let gameOverAudio = new Audio("./audio/game-over.mp3");
 let gameOverScreen = document.getElementById("game-over-screen");
+let backgroundAudio = new Audio("./audio/background-sound.mp3");
+soundStart(backgroundAudio);
 console.log(gameOverScreen);
 
 let input = document.getElementById("input-num");
