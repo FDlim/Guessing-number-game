@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "font";
+  src: url(./fonts/Nanum_Brush_Script/NanumBrushScript-Regular.ttf);
+}
+
+body {
+  font-family: font;
+  margin: 0px;
+  height: 100vh;
+  background-image: url(./image/background.jpg);
+  background-size: cover;
+}
+
+.container {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(./image/pexels-photo-235986.jpeg);
+  background-position: top;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.shadow-box {
+  opacity: 0.6;
+  margin: 0 auto;
+
+  width: 400px;
+  height: 800px;
+
+  background-color: coral;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  overflow: hidden;
+}
+.game-over {
+  display: flex;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  object-fit: contain;
+  overflow: hidden;
+}
+.content {
+  display: block;
+  width: 400px;
+  height: 800px;
+  position: absolute;
+
+  justify-content: center;
+}
+
+.title {
+  margin-top: 15%;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+}
+.title-1 {
+  display: flex;
+  justify-content: center;
+}
+
+.input-num {
+  margin-left: 40%;
+  margin-right: 40%;
+  display: flex;
+  justify-content: center;
+  font-size: 5em;
+
+  width: 60px;
+  height: 60px;
+  margin-top: 10%;
+}
+
+.input-style {
+  font-size: 80%;
+  width: 100px;
+  text-align: center;
+  background-color: #e04342;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.what-is-number {
+  font-size: 5em;
+  display: flex;
+  justify-content: center;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  margin-top: 5%;
+}
+
+.button-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.play-button {
+  background-color: #e04342;
+  height: 60px;
+  width: 90px;
+  font-size: 40px;
+}
+
+.reset-button {
+  height: 60px;
+  width: 90px;
+  background-color: #e04342;
+  font-size: 35px;
+}

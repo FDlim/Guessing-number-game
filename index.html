@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>숫자맞추기 업다운게임</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio autoplay loop src="audio/background-sound.mp3"></audio>
+    <div class="container">
+      <div class="shadow-box" id="shadow-box"></div>
+      <div class="game-over" id="game-over-screen">
+        <!-- <img src="./image/6KLILHt7BlgmhiumLaQBkyLeW1xkF24NoOcQlKw04H6DCq3etC0bahk7BGFK2qNNy5uCRzaIRRAqA413g1mkWA.gif"alt=""/> -->
+      </div>
+      <div class="content">
+        <div class="title"><h1 class="title-1">숫자 맞추기 게임</h1></div>
+
+        <div class="what-is-number" id="what-num">??</div>
+        <div class="result" id="result">틀린다면 어떻게 될까...?</div>
+        <div class="input-num">
+          <input type="number" class="input-style" id="input-num" />
+        </div>
+        <div class="button-content">
+          <button id="play-button" class="play-button">Go!</button>
+          <button id="reset-button" class="reset-button">리셋!</button>
+        </div>
+        <script src="./main.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
