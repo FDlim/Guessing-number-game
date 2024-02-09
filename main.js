@@ -98,11 +98,12 @@ function gameStart() {
   }
   beforeInputNum = inputNum;
   if (chance == 0) {
-    gameOverScreen.className = "game-over";
+    gameOverScreen.style.opacity = 1;
     result.textContent = "끝났어...탈락이야";
     result.style.color = "red";
     whatNum.style.color = "red";
     whatNum.textContent = computerNum;
+    input.disabled = true;
 
     playButton.disabled = true;
     soundStart(gameOverAudio);
@@ -123,8 +124,9 @@ function gameReset() {
   input.value = "";
   result.style.color = "black";
   whatNum.style.color = "black";
-  gameOverScreen.innerHTML = "";
   chancesLeft.style.color = "black";
+  gameOverScreen.style.opacity = 0;
+  input.disabled = false;
   chanceView();
   bloodOpacity(chance);
 }
