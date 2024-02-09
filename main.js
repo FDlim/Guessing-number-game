@@ -14,8 +14,14 @@ let gameOverScreen = document.getElementById("game-over-screen");
 let input = document.getElementById("input-num");
 let gameStartBtn = document.getElementById("game-start");
 let buttonContent = document.getElementById("button-content");
-
+let chancesLeft = document.getElementById("chance");
 let computerNum = 0;
+function bloodOpacity(chance) {
+  let blood = document.getElementById("blood");
+  blood.style.opacity = 1 / chance;
+  chance == 5 ? (blood.style.opacity = 0) : "";
+}
+
 playButton.disabled = true;
 resetButton.disabled = true;
 input.disabled = true;
@@ -24,6 +30,7 @@ input.addEventListener("keypress", function (event) {
   if (event.keyCode === 13) {
     gameStart();
     console.log("엔터 눌러짐");
+    input.value = "";
   }
 });
 resetButton.addEventListener("click", gameReset);
@@ -33,6 +40,8 @@ gameStartBtn.addEventListener("click", function () {
   playButton.disabled = false;
   resetButton.disabled = false;
   soundStart(backgroundAudio);
+  chanceView();
+  chancesLeft.style.opacity = 1;
 });
 input.addEventListener("click", function () {
   input.value = "";
@@ -50,9 +59,17 @@ function pickRandomNum() {
   console.log("정답은", computerNum);
 }
 pickRandomNum();
+
+function chanceView() {
+  chancesLeft.innerHTML = `남은기회 ${chance}회`;
+}
+
 function gameStart() {
   let inputNum = input.value;
   console.log("입력한 숫자", inputNum);
+  let upCount = false;
+  let downCount = false;
+  let chanceCss = document.getElementById("chance");
 
   if (inputNum == undefined) {
     console.log("숫자를 입력해 주세요");
@@ -90,6 +107,10 @@ function gameStart() {
     playButton.disabled = true;
     soundStart(gameOverAudio);
   }
+  chanceView();
+
+  chance == 1 ? (chancesLeft.style.color = "red") : "";
+  bloodOpacity(chance);
 }
 
 function gameReset() {
@@ -103,4 +124,7 @@ function gameReset() {
   result.style.color = "black";
   whatNum.style.color = "black";
   gameOverScreen.innerHTML = "";
+  chancesLeft.style.color = "black";
+  chanceView();
+  bloodOpacity(chance);
 }
