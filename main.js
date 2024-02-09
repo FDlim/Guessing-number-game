@@ -1,3 +1,6 @@
+let gameOverImage = new Image();
+gameOverImage.src = "./image/game-over-screen.gif";
+console.log(gameOverImage.src);
 let playButton = document.getElementById("play-button");
 let resetButton = document.getElementById("reset-button");
 let chance = 5;
@@ -69,7 +72,7 @@ function gameStart() {
   }
   beforeInputNum = inputNum;
   if (chance == 0) {
-    gameOverScreen.innerHTML = `<img src="./image/game-over-screen.gif"alt=""/>`;
+    gameOverScreen.innerHTML = `<img src="${gameOverImage.src}" alt="" />`;
     result.textContent = "끝났어...탈락이야";
     result.style.color = "red";
     whatNum.style.color = "red";
