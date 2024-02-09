@@ -39,6 +39,16 @@ body {
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   overflow: hidden;
 }
+.game-over-hidden {
+  display: flex;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  object-fit: contain;
+  overflow: hidden;
+  opacity: 0;
+}
 .game-over {
   display: flex;
   position: absolute;
@@ -47,6 +57,7 @@ body {
   justify-content: center;
   object-fit: contain;
   overflow: hidden;
+  opacity: 1;
 }
 .content {
   width: 400px;

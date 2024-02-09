@@ -17,10 +17,12 @@ let buttonContent = document.getElementById("button-content");
 let computerNum = 0;
 playButton.disabled = true;
 resetButton.disabled = true;
+input.disabled = true;
 playButton.addEventListener("click", gameStart);
 resetButton.addEventListener("click", gameReset);
 gameStartBtn.addEventListener("click", function () {
   gameStartBtn.remove();
+  input.disabled = false;
   playButton.disabled = false;
   resetButton.disabled = false;
   soundStart(backgroundAudio);
@@ -72,7 +74,7 @@ function gameStart() {
   }
   beforeInputNum = inputNum;
   if (chance == 0) {
-    gameOverScreen.innerHTML = `<img src="${gameOverImage.src}" alt="" />`;
+    gameOverScreen.className = "game-over";
     result.textContent = "끝났어...탈락이야";
     result.style.color = "red";
     whatNum.style.color = "red";
